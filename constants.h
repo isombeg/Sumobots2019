@@ -2,7 +2,7 @@
 #define CONSTANTS_H_INCLUDED
 
 #include "drive.h"
-#include "motor.h"
+#include "motor_control.h"
 
 /*File contains all constants being used
 withing the project*/

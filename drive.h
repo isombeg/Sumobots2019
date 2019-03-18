@@ -5,7 +5,7 @@
 
 class Drive{
 private:
-    Motor lMotor, rMotor; //motor A, motor B
+    Motor *lMotor, *rMotor; //motor A, motor B
     void setup();
     void cw_s_Pivot();
     void ccw_s_Pivot();
