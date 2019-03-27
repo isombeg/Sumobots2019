@@ -2,8 +2,10 @@
 #include "motor_control.h"
 #include "Arduino.h"
 
-Drive::Drive(int A_pinA, int A_pinB, int B_pinA, int B_pinB) :
-    lMotor(A_pinA, A_pinB), rMotor(B_pinA, B_pinB){
+Drive::Drive(int A_pinA, int A_pinB, int B_pinA, int B_pinB)
+{
+    lMotor = new Motor(A_pinA,A_pinB);
+    rMotor = new Motor(B_pinA,B_pinB);
 
 }
 

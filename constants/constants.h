@@ -3,6 +3,9 @@
 
 #include "drive.h"
 #include "motor_control.h"
+#include "ultrasonic.h"
+#include "qrd.h"
+#include "qrd_network.h"
 
 /*File contains all constants being used
 withing the project*/
@@ -30,7 +33,12 @@ withing the project*/
 #define MOTOR_B_1B 10
 
 //drive object
-Drive drive (MOTOR_A_1A, MOTOR_A_1B, MOTOR_B_1A, MOTOR_B_1B);
-
+Drive* drive = new Drive(MOTOR_A_1A, MOTOR_A_1B, MOTOR_B_1A, MOTOR_B_1B);
+ultrasonic* uss = new ultrasonic(TRIG,ECHO);
+qrd* qrd1 = new qrd(U1,U1_PIN);
+qrd* qrd2 = new qrd(U2,U2_PIN);
+qrd* qrd3 = new qrd(U3,U3_PIN);
+qrd* qrd4 = new qrd(U4,U4_PIN);
+Qrd_Network* qrd_net = new Qrd_Network(qrd1, qrd2, qrd3, qrd4);
 
 #endif // CONSTANTS_H_INCLUDED
