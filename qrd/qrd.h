@@ -8,7 +8,7 @@ private:
 public:
     qrd(int pinA1, int pin1);
     int read();
-    int assess();
+    bool assess();
 };
 
 #endif // QRD_H_INCLUDED

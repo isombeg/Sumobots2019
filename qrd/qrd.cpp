@@ -11,11 +11,14 @@ qrd::qrd(int pinA1, int pin1):
 }
 
 int qrd::read(){
-    int readVal = analogRead(pin);
+    return analogRead(pin);
     // int current will be returned from the pin
     // need to calculate the threshold values for how much current to be allowed to determine range
     // tests required
 }
 
-int qrd::assess(){  // returns 1 if it is on the line, otherwise returns 0 if it is not
+bool qrd::assess(){  // returns 1 if it is on the line, otherwise returns 0 if it is not
+    if(this->read() <= 100)
+        return true;
+    return false;
 }

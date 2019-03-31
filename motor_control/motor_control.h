@@ -10,6 +10,8 @@ public:
     void spinClock();
     void spinCounter();
     void stall();
+    void spinClockWeak();
+    void spinCounterWeak();
 };
 
 #endif // MOTOR_CONTROL_H_INCLUDED

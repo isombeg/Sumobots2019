@@ -34,3 +34,13 @@ void Motor::stall(){
     digitalWrite(pinA, LOW);
     digitalWrite(pinB, LOW);
 }
+
+void Motor::spinClockWeak(){
+    analogWrite(pinA,5);
+    analogWrite(pinB,0);
+}
+
+void Motor::spinCounterWeak(){
+    analogWrite(pinA,0);
+    analogWrite(pinB,5);
+}

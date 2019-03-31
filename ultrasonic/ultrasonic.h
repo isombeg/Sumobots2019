@@ -9,7 +9,7 @@ private:
 public:
     ultrasonic(int pinTrig, int pinEcho);
     double read();
-    int assess();
+    bool assess();
 
 };
 

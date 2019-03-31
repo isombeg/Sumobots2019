@@ -20,13 +20,22 @@ void Drive::ccw_s_Pivot(){
 }
 
 void Drive::cw_d_Pivot(){
-    rMotor->stall();
     lMotor->spinCounter();
+    rMotor->spinClockWeak();
 }
 
 void Drive::ccw_d_Pivot(){
-    lMotor->stall();
-    rMotor->spinClock();
+    lMotor->spinClockWeak();
+    rMotor->spinCounter();
+}
+void Drive::cw_d_Pivot_b(){
+    lMotor->spinClockWeak();
+    rMotor->spinCounter();
+}
+
+void Drive::ccw_d_Pivot_b(){
+    lMotor->spinClock();
+    rMotor->spinCounterWeak();
 }
 
 void Drive::forwardDrive(){
@@ -49,7 +58,3 @@ void Drive::s_Pivot(int dir){
     else ccw_s_Pivot();
 }
 
-void Drive::d_Pivot(int dir){
-    if(dir == 1) cw_d_Pivot();
-    else ccw_d_Pivot();
-}

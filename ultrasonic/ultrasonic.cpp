@@ -28,6 +28,6 @@ double ultrasonic::read(){
     return (t2-t1)/58.0;
 }
 
-int ultrasonic::assess(){
+bool ultrasonic::assess(){
     return read() < RING_DIAMETER;
 }
